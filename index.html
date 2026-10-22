@@ -2,28 +2,19 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Apps Script & GitHub Pages</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Saya</title>
+    <style>
+        body, html {
+            margin: 0; padding: 0; height: 100%; overflow: hidden;
+        }
+        iframe {
+            border: none; width: 100%; height: 100%;
+        }
+    </style>
 </head>
 <body>
-    <h1>Menghubungkan GitHub Pages ke Apps Script</h1>
-    <button onclick="panggilAppsScript()">Ambil Data</button>
-    <p id="respons"></p>
-
-    <script>
-        function panggilAppsScript() {
-            // Ganti dengan URL Web App Apps Script Anda
-            const url = "https://script.google.com/a/macros/guru.sma.belajar.id/s/AKfycbxSs5smAnEhV_dUNpz5FQRIaUdTBGzRE03_xjkYJsQVpin5IZv-uDJf2AhIf8BOqi32mg/exec"; 
-
-            fetch(url)
-            .then(response => response.json())
-            .then(data => {
-                document.getElementById("respons").innerText = data.pesan;
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                document.getElementById("respons").innerText = "Gagal mengambil data.";
-            });
-        }
-    </script>
-  </body>
+    <!-- GANTI URL DI BAWAH INI DENGAN URL WEB APP GOOGLE APPS SCRIPT ANDA -->
+    <iframe src="https://script.google.com/macros/s/AKfycbxSs5smAnEhV_dUNpz5FQRIaUdTBGzRE03_xjkYJsQVpin5IZv-uDJf2AhIf8BOqi32mg/exec"></iframe>
+</body>
 </html>
