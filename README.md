@@ -1,0 +1,1 @@
+# G7KAIH-smanka
