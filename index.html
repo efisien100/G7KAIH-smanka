@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Apps Script & GitHub Pages</title>
+</head>
+<body>
+    <h1>Menghubungkan GitHub Pages ke Apps Script</h1>
+    <button onclick="panggilAppsScript()">Ambil Data</button>
+    <p id="respons"></p>
+
+    <script>
+        function panggilAppsScript() {
+            // Ganti dengan URL Web App Apps Script Anda
+            const url = "https://script.google.com/a/macros/guru.sma.belajar.id/s/AKfycbxSs5smAnEhV_dUNpz5FQRIaUdTBGzRE03_xjkYJsQVpin5IZv-uDJf2AhIf8BOqi32mg/exec"; 
+
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("respons").innerText = data.pesan;
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                document.getElementById("respons").innerText = "Gagal mengambil data.";
+            });
+        }
+    </script>
+  </body>
+</html>
